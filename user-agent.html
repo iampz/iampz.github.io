@@ -1,3 +1,6 @@
 <script>
-document.write(navigator.userAgent)
+function isMobileDevice() {
+  return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)
+};
+document.write('isMobile = ' + isMobileDevice())
 </script>
