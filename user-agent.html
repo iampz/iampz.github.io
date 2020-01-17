@@ -1,6 +1,15 @@
 <script>
-function isMobileDevice() {
-  return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)
-};
-document.write('isMobile = ' + isMobileDevice())
+  
+  function isMobile() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)
+  }
+  
+  document.write('isMobile = ' + isMobile())
+  
+  function isAndroid() {
+    return /android|silk/i.test(navigator.userAgent)
+  }
+  
+  document.write('isAndroid = ' + isAndroid())
+  
 </script>
