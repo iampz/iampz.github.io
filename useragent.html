@@ -1,0 +1,25 @@
+<script>
+  
+  document.write(navigator.userAgent + '<br>')
+  
+  function isMobile() {
+    return (typeof orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)
+  }
+  
+  document.write('isMobile = ' + isMobile() + '<br>')
+  
+  function isAndroid() {
+    return /android|silk/i.test(navigator.userAgent)
+  }
+  
+  document.write('isAndroid = ' + isAndroid() + '<br>')
+  
+  function getDevice() {
+    if (!isMobile()) return 'computer'
+    else if (isAndroid()) return 'android'
+    else return 'ios'
+  }
+  
+  document.write('Device = ' + getDevice() + '<br>')
+  
+</script>
