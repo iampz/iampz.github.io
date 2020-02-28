@@ -15,11 +15,11 @@
     <h4>Function</h4>
     <form id="type">
       <p>
-        <input id="textToBits" name="func" type="radio" value="textToBits" checked />
+        <input id="textToBits" name="func" type="radio" value="1" checked />
         <label for="textToBits">Text to Bits</label>
       </p>
       <p>
-        <input id="bitsToText" name="func" type="radio" value="bitsToText" />
+        <input id="bitsToText" name="func" type="radio" value="0" />
         <label for="bitsToText">Bits to Text</label>
       </p>
     </form>
@@ -90,7 +90,7 @@ const bitsToText = bits => {
     const func = document.getElementById('type').func.val
     const text = document.getElementById('text')
     const result = document.getElementById('result')
-    result.textContent = window[func](text)
+    result.textContent = func ? textToBits(text) : bitsToText(text)
   }
 })()
 
