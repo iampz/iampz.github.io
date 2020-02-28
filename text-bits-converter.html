@@ -90,7 +90,7 @@ const bitsToText = bits => {
     const type = document.getElementById('type').type.value
     const text = document.getElementById('text').value
     const result = document.getElementById('result')
-    result.textContent = (func === 'text') ? textToBits(text) : bitsToText(text)
+    result.textContent = (type === 'text') ? textToBits(text) : bitsToText(text)
   }
 })()
 
