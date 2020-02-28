@@ -87,7 +87,7 @@ const bitsToText = bits => {
   const convertBtn = document.getElementById('convert')
   convertBtn.onclick = e => {
     e.preventDefault()
-    const func = document.getElementById('type').func.val
+    const func = document.getElementById('type').func.value
     const text = document.getElementById('text')
     const result = document.getElementById('result')
     result.textContent = func ? textToBits(text) : bitsToText(text)
