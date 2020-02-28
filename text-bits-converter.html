@@ -12,14 +12,14 @@
 <div id="container">
 
   <div class="block">
-    <h4>Function</h4>
+    <h4>Input type</h4>
     <form id="type">
       <p>
-        <input id="textToBits" name="func" type="radio" value="1" checked />
+        <input id="textToBits" name="type" type="radio" value="text" checked />
         <label for="textToBits">Text to Bits</label>
       </p>
       <p>
-        <input id="bitsToText" name="func" type="radio" />
+        <input id="bitsToText" name="type" type="radio" value="bits" />
         <label for="bitsToText">Bits to Text</label>
       </p>
     </form>
@@ -87,10 +87,10 @@ const bitsToText = bits => {
   const convertBtn = document.getElementById('convert')
   convertBtn.onclick = e => {
     e.preventDefault()
-    const func = document.getElementById('type').func.value
+    const type = document.getElementById('type').type.value
     const text = document.getElementById('text').value
     const result = document.getElementById('result')
-    result.textContent = func ? textToBits(text) : bitsToText(text)
+    result.textContent = (func === 'text') ? textToBits(text) : bitsToText(text)
   }
 })()
 
