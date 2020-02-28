@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>Text <-> Bits Converter</title>
+</head>
+<body>
+
+<header>
+  <h1>Text <-> Bits Converter</h1>
+</header>
+
+<div id="container">
+
+  <div class="block">
+    <h4>Function</h4>
+    <form id="type">
+      <p>
+        <input id="textToBits" name="func" type="radio" value="textToBits" checked />
+        <label for="textToBits">Text to Bits</label>
+      </p>
+      <p>
+        <input id="bitsToText" name="func" type="radio" value="bitsToText" />
+        <label for="bitsToText">Bits to Text</label>
+      </p>
+    </form>
+  </div>
+  
+  <div class="block">
+    <h4>Text / Bits</h4>
+    <p><input id="text" type="text" value="" /></p>
+    <p><input id="convert" type="button" value="Convert" /></p>
+  </div>
+
+  <div class="block">
+    <h4>Result</h4>
+    <p id="result"></p>
+  </div>
+
+</div>
+
+<script>
+
+// only english allowed
+const textToBytes = text => {
+  return text
+    .split('')
+    .map((val) => {
+      return (
+        '0000000' +
+        val
+          .charCodeAt(0)
+          .toString(2)
+      ).slice(-8)
+    })
+    .join(' ')
+}
+
+// thai supported
+const textTo16Bit = text => {
+  return text
+    .split('')
+    .map((val) => {
+      return (
+        '000000000000000' +
+        val
+          .charCodeAt(0)
+          .toString(2)
+      ).slice(-16)
+    })
+    .join(' ')
+}
+
+const textToBits = text => /[\x32-\x7e]+$/.test(text) ? textToBytes(text) : textTo16Bit(text)
+
+const bitsToText = bits => {
+  return bits
+    .split(' ')
+    .map((val) => {
+      return String.fromCharCode(
+        parseInt(val, 2)
+      )
+    })
+    .join('')
+}
+
+(function() {
+  const convertBtn = document.getElementById('convert')
+  convertBtn.onclick = e => {
+    e.preventDefault()
+    const func = document.getElementById('type').func.val
+    const text = document.getElementById('text')
+    const result = document.getElementById('result')
+    result.textContent = window[func](text)
+  }
+})()
+
+</script>
+
+</body>
+</html>
