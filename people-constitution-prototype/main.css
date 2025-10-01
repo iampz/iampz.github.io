@@ -1,3 +1,76 @@
 html {
   font-family: Sarabun, sans-serif;
+  color: #111;
 }
+
+body {
+  margin: 0;
+  background: #eee;
+}
+
+#main-nav {
+  background-image: linear-gradient(#410808,#820f0f);
+}
+  #main-nav a {
+    color: #eee;
+    text-decoration: none;
+  }
+  #main-nav h1 {
+    margin: 0;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 60px;
+  }
+  #nav-menu {
+    float: left;
+    display: inline-block;
+    padding: 0 15px;
+    line-height: 60px;
+  }
+    #nav-menu:hover {
+      background: rgba(255, 255, 255, .1);
+    }
+    #nav-menu::after {
+      content: 'menu';
+    }
+    #nav-menu.show::after {
+      content: 'close';
+    }
+  #nav-login {
+    float: right;
+    border: 1px solid #eee;
+    margin: 16px;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 28px;
+  }
+    #nav-login:hover {
+      background: rgba(255, 255, 255, .1);
+    }
+
+#menu-list {
+  visibility: hidden;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: #222;
+}
+  #menu-list.show {
+    visibility: visible;
+  }
+  #list-wrapper {
+    padding: 1px 5px 5px 5px;
+  }
+  #menu-list a {
+    display: block;
+    margin-top: 4px;
+    padding: 7px 12px;
+    color: #eee;
+    background: #333;
+    text-decoration: none;
+  }
+  #menu-list a:hover {
+    background: #444;
+  }
