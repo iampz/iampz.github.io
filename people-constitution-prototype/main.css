@@ -8,36 +8,36 @@ body {
   background: #eee;
 }
 
-#main-nav {
+#nav-bar {
   background-image: linear-gradient(#410808,#820f0f);
 }
-  #main-nav a {
+  #nav-bar a {
     color: #eee;
     text-decoration: none;
   }
-  #main-nav h1 {
+  #nav-bar h1 {
     margin: 0;
     display: inline-block;
     font-size: 18px;
     font-weight: bold;
     line-height: 60px;
   }
-  #nav-menu {
+  #nav {
     float: left;
     display: inline-block;
     padding: 0 15px;
     line-height: 60px;
   }
-    #nav-menu:hover {
+    #nav:hover {
       background: rgba(255, 255, 255, .1);
     }
-    #nav-menu::after {
+    #nav::after {
       content: 'menu';
     }
-    #nav-menu.show::after {
+    #nav.show::after {
       content: 'close';
     }
-  #nav-login {
+  #login {
     float: right;
     border: 1px solid #eee;
     margin: 16px;
@@ -45,11 +45,11 @@ body {
     font-size: 14px;
     line-height: 28px;
   }
-    #nav-login:hover {
+    #login:hover {
       background: rgba(255, 255, 255, .1);
     }
 
-#menu-list {
+#menu {
   visibility: hidden;
   position: absolute;
   top: 60px;
@@ -57,13 +57,13 @@ body {
   width: 100%;
   background: #222;
 }
-  #menu-list.show {
+  #menu.show {
     visibility: visible;
   }
-  #list-wrapper {
+  #menu-wrapper {
     padding: 1px 5px 5px 5px;
   }
-  #menu-list a {
+  #menu a {
     display: block;
     margin-top: 4px;
     padding: 7px 12px;
@@ -71,6 +71,20 @@ body {
     background: #333;
     text-decoration: none;
   }
-  #menu-list a:hover {
+  #menu a:hover {
     background: #444;
   }
+
+#footer {
+  margin: 25px 0;
+  text-align: center;
+}
+  #footer a {
+    margin-left: 10px;
+    color: #17e;
+    text-decoration: none;
+  }
+  #footer a:hover {
+    text-decoration: underline;
+  }
+  
