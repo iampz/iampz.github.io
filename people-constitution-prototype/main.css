@@ -79,16 +79,16 @@ body {
     background: #444;
   }
 
-#footer {
+.footer {
   margin: 25px 0;
   text-align: center;
 }
-  #footer a {
+  .footer a {
     margin-left: 10px;
     color: #17e;
     text-decoration: none;
   }
-  #footer a:hover {
+  .footer a:hover {
     text-decoration: underline;
   }
   
