@@ -9,6 +9,10 @@ body {
 }
 
 #nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-image: linear-gradient(#410808,#820f0f);
 }
   #nav-bar a {
@@ -37,7 +41,7 @@ body {
     #nav.show::after {
       content: 'close';
     }
-  #login {
+  #login-btn {
     float: right;
     border: 1px solid #eee;
     margin: 16px;
@@ -45,14 +49,14 @@ body {
     font-size: 14px;
     line-height: 28px;
   }
-    #login:hover {
+    #login-btn:hover {
       background: rgba(255, 255, 255, .1);
     }
 
 #menu {
   visibility: hidden;
   position: absolute;
-  top: 60px;
+  top: 61px;
   left: 0;
   width: 100%;
   background: #222;
@@ -86,5 +90,119 @@ body {
   }
   #footer a:hover {
     text-decoration: underline;
+  }
+  
+section {
+  clear: both;
+  margin-top: 61px;
+  padding: 40px 0;
+}
+
+
+#home {
+  background: #eee;
+}
+  #home h2 {
+    text-align: center;
+  }
+
+  #order {
+    display: flex;
+    flex-wrap: wrap;
+  }
+    #order a {
+      flex-grow: 3;
+      color: #555;
+      background: #eee;
+      font-size: 18px;
+      line-height: 48px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+    }
+    #order a:hover {
+      color: #333;
+      background: #f4f4f4;
+    }
+    #order .active, #order .active:hover {
+      color: #111;
+      background: #f9f9f9;
+    }
+    
+  #content {
+    background: #f9f9f9;
+  }
+
+  .topic {
+    padding: 20px;
+  }
+  .topic + .topic {
+    border-top: 1px solid #ddd;
+  }
+  
+  .topic-link {
+    display: block;
+    color: #111;
+    text-decoration: none;
+  }
+  .topic-link:hover {
+    color: #511;
+    background: #eee;
+  }
+
+  .summary > span {
+    display: inline-block;
+    height: 30px;
+    margin-right: 7px;
+    padding: 2px 14px;
+    border-radius: 16px;
+    line-height: 28px;
+    font-weight: bold;
+  }
+  .type {
+    color: #eee;
+    background-image: linear-gradient(#410808,#820f0f);
+  }
+  .score {
+    color: #410808;
+    border: 1px solid #820f0f;
+  }
+    .score .separator {
+      display: inline-block;
+      margin: 0 4px;
+      color: #ddbfbf;
+    }
+  .summary > .view {
+    margin-right: 0;
+    padding: 2px 0;
+    border-radius: 0px;
+    color: #888;
+  }
+  
+  .tags {
+    font-size: 14px;
+  }
+    .tag {
+      padding: 4px 6px;
+      background: #ddd;
+      border-radius: 4px;
+      color: #222;
+      text-decoration: none;
+    }
+    .tag + .tag {
+      margin-left: 3px;
+    }
+    .tag:hover {
+      color: #000;
+      background: #e5e5e5;
+    }
+
+#login {
+  background: #fff;
+  text-align: center;
+}
+  #login h2 {
+    margin: 0;
+    line-height: 70px;
   }
   
