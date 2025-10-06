@@ -80,7 +80,7 @@ body {
   }
 
 footer {
-  padding: 40px 0;
+  padding: 20px 0;
 }
 .footer {
   margin: 0;
@@ -100,7 +100,7 @@ footer {
 section {
   clear: both;
   margin-top: 61px;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 
@@ -135,12 +135,13 @@ section {
     }
     
   #content {
+    padding: 10px 0;
     background: #f9f9f9;
   }
 
   .topic {
     font-size: 14px;
-    padding: 20px;
+    padding: 5px 20px;
   }
   .topic + .topic {
     border-top: 1px solid #ddd;
@@ -154,6 +155,10 @@ section {
   .topic-link:hover {
     color: #511;
     background: #eee;
+  }
+  .topic-link h3, .topic-link p {
+    margin: 0;
+    padding: 5px 0;
   }
 
   .summary > span {
